@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Django Templates Test</title>
+    <title>Django App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>Hello Templates!</h1>
+    <h1>InternTrack</h1>
+    <nav>
+        <a href="{% url 'home' %}">Home</a> |
+        <a href="{% url 'about' %}">About</a>
+    </nav>
+
+    <hr>
+
     {% block content %}{% endblock %}
 </body>
 </html>
